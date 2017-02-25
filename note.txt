@@ -1,0 +1,2 @@
+Electron forge
+Shared value store (redux store) can be sent via ipc
