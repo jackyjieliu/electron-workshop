@@ -1,5 +1,5 @@
 // This file is required by index.html and runs on the browser thread
-const { ipcRenderer } = require('electron');
+const { ipcRenderer, remote } = require('electron');
 const monacoLoader = require('monaco-loader');
 const fs = require('fs');
 
@@ -13,9 +13,9 @@ monacoLoader().then(monaco => {
 });
 
 window.onload = () => {
-  document.querySelector('#save').onClick(() => {
+  document.querySelector('#save').onclick = () => {
     saveFile();
-  });
+  };
 }
 
 // Listener for the navigate event sent in index.js
